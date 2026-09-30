@@ -1,26 +1,556 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Registered so the annotation frame can animate its ticks and colour. */
+@property --tick {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 10px;
+}
+@property --frame {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #3a4560;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink: #080b12;
+  --color-surface: #0d121e;
+  --color-raised: #141a29;
+  --color-line: #222a3b;
+  --color-line-strong: #3a4560;
+  --color-text: #e8ecf4;
+  --color-muted: #9aa5ba;
+  --color-faint: #7e8aa3;
+  --color-signal: #7c9bff;
+  --color-signal-deep: #3d5bd9;
+  --color-lock: #c9f24b;
+  --color-on-lock: #0b1005;
+
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, "SFMono-Regular", monospace;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-quart: cubic-bezier(0.5, 0, 0.75, 0);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@layer base {
+:root {
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+  --shell: 82.5rem;
+  --nav-h: 4.5rem;
+  color-scheme: dark;
+}
+
+html {
+  background: var(--color-ink);
+  scroll-behavior: smooth;
+  scrollbar-color: var(--color-line-strong) var(--color-ink);
+  scrollbar-width: thin;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-ink);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  caret-color: var(--color-lock);
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--color-lock);
+  color: var(--color-on-lock);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-lock);
+  outline-offset: 3px;
+}
+}
+
+@layer components {
+/* ---------- Layout ---------- */
+
+.shell {
+  width: min(100% - 2 * var(--gutter), var(--shell));
+  margin-inline: auto;
+}
+
+.section {
+  position: relative;
+  padding-block: clamp(6rem, 10vw, 9rem) clamp(2.5rem, 5vw, 4rem);
+}
+
+/* ---------- Type ---------- */
+
+.display {
+  font-stretch: 125%;
+  font-weight: 700;
+  font-size: clamp(2.75rem, 8.2vw, 6rem);
+  line-height: 0.94;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.h2 {
+  font-stretch: 116%;
+  font-weight: 650;
+  font-size: clamp(2rem, 4.6vw, 3.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.h3 {
+  font-stretch: 108%;
+  font-weight: 600;
+  font-size: clamp(1.375rem, 2.2vw, 1.75rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.lead {
+  font-size: clamp(1.1875rem, 1.7vw, 1.5rem);
+  line-height: 1.45;
+  text-wrap: pretty;
+}
+
+.prose {
+  max-width: 68ch;
+  color: var(--color-muted);
+  text-wrap: pretty;
+}
+
+/* Mono is for data: dates, stack names, stage names, coordinates. */
+.data {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.link {
+  text-decoration: underline;
+  text-decoration-color: var(--color-line-strong);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.28em;
+  transition:
+    color 180ms var(--ease-out-expo),
+    text-decoration-color 180ms var(--ease-out-expo);
+}
+.link:hover {
+  color: var(--color-lock);
+  text-decoration-color: var(--color-lock);
+}
+
+/* ---------- Annotation frame ----------
+   Four corner ticks at rest. On lock the ticks draw out until they meet
+   and the frame closes, the same way a detector box settles on a target. */
+
+.frame {
+  position: relative;
+}
+.frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--frame), var(--frame)) left top / var(--tick) 1px,
+    linear-gradient(var(--frame), var(--frame)) left top / 1px var(--tick),
+    linear-gradient(var(--frame), var(--frame)) right top / var(--tick) 1px,
+    linear-gradient(var(--frame), var(--frame)) right top / 1px var(--tick),
+    linear-gradient(var(--frame), var(--frame)) left bottom / var(--tick) 1px,
+    linear-gradient(var(--frame), var(--frame)) left bottom / 1px var(--tick),
+    linear-gradient(var(--frame), var(--frame)) right bottom / var(--tick) 1px,
+    linear-gradient(var(--frame), var(--frame)) right bottom / 1px var(--tick);
+  background-repeat: no-repeat;
+  transition:
+    --tick 420ms var(--ease-out-expo),
+    --frame 180ms linear;
+}
+.frame[data-locked="true"]::before,
+.frame-lock:hover::before,
+.frame-lock:focus-visible::before,
+.frame-lock:focus-within::before {
+  --tick: 51%;
+  --frame: var(--color-lock);
+}
+.frame[data-closed="true"]::before {
+  --tick: 51%;
+}
+.frame-sm::before {
+  --tick: 5px;
+}
+
+/* Label chip that rides the top edge of a framed figure. */
+.tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  padding: 0.3125rem 0.5rem;
+  color: var(--color-muted);
+  background: var(--color-raised);
+}
+.tag[data-locked="true"] {
+  color: var(--color-on-lock);
+  background: var(--color-lock);
+}
+
+/* ---------- Controls ---------- */
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  min-height: 3rem;
+  padding-inline: 1.5rem;
+  font-stretch: 108%;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color 180ms var(--ease-out-expo),
+    color 180ms var(--ease-out-expo),
+    translate 120ms var(--ease-out-expo);
+}
+.btn:active {
+  translate: 0 1px;
+}
+.btn-solid {
+  background: var(--color-text);
+  color: var(--color-ink);
+}
+.btn-solid:hover {
+  background: var(--color-lock);
+  color: var(--color-on-lock);
+}
+.btn-frame {
+  color: var(--color-text);
+}
+.btn-frame::before {
+  --frame: var(--color-faint);
+}
+.btn-frame:hover {
+  color: var(--color-lock);
+}
+.btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---------- Hero system overlay ---------- */
+
+.sys-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform;
+  /* Hidden until the render loop has placed it on its node. */
+  visibility: hidden;
+}
+.sys-label[data-placed="true"] {
+  visibility: visible;
+}
+.sys-box {
+  position: absolute;
+  left: -1.125rem;
+  top: -1.125rem;
+  width: 2.25rem;
+  height: 2.25rem;
+}
+.sys-box::before {
+  --tick: 7px;
+  --frame: var(--color-signal);
+  opacity: 0.55;
+  transition:
+    --tick 380ms var(--ease-out-expo),
+    --frame 120ms linear,
+    opacity 120ms linear;
+}
+.sys-tag {
+  position: absolute;
+  left: 1.625rem;
+  top: -0.6875rem;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  padding: 0.3125rem 0.5rem;
+  color: var(--color-muted);
+  /* A solid chip: the data stream passes behind the label, never through it. */
+  background: color-mix(in srgb, var(--color-ink) 86%, transparent);
+  transition:
+    color 120ms linear,
+    background-color 120ms linear;
+}
+.sys-label[data-locked="true"] .sys-box::before {
+  --tick: 51%;
+  --frame: var(--color-lock);
+  opacity: 1;
+}
+.sys-label[data-locked="true"] .sys-tag {
+  color: var(--color-on-lock);
+  background: var(--color-lock);
+}
+@media (max-width: 47.99rem) {
+  /* Narrow screens: labels sit to the left of their nodes, inside the frame. */
+  .sys-box {
+    left: -0.625rem;
+    top: -0.625rem;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .sys-box::before {
+    --tick: 4px;
+  }
+  .sys-tag {
+    left: auto;
+    right: 1rem;
+    top: -0.625rem;
+    font-size: 0.6875rem;
+    padding: 0.25rem 0.375rem;
+  }
+}
+
+/* ---------- Entrance: the hero writes itself in once ---------- */
+
+@keyframes line-up {
+  from {
+    translate: 0 105%;
+  }
+}
+@keyframes settle {
+  from {
+    opacity: 0;
+    translate: 0 0.75rem;
+  }
+}
+.rise-line {
+  display: block;
+  overflow: clip;
+  overflow-clip-margin: 0.08em;
+}
+.rise-line > span {
+  display: block;
+  animation: line-up 900ms var(--ease-out-expo) both;
+  animation-delay: calc(var(--i, 0) * 90ms + 120ms);
+}
+.settle {
+  animation: settle 800ms var(--ease-out-expo) both;
+  animation-delay: calc(var(--i, 0) * 70ms + 380ms);
+}
+
+/* ---------- Pipeline: a signal travels stage to stage ---------- */
+
+.stage-link {
+  position: relative;
+  background: var(--color-line);
+}
+.stage-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-lock);
+  scale: 0 1;
+  transform-origin: left center;
+  transition: scale 360ms var(--ease-out-expo);
+}
+.stage[data-passed="true"] .stage-link::after {
+  scale: 1 1;
+}
+@media (max-width: 47.99rem) {
+  .stage-link::after {
+    scale: 1 0;
+    transform-origin: center top;
+  }
+  .stage[data-passed="true"] .stage-link::after {
+    scale: 1 1;
+  }
+}
+
+/* ---------- Figures ---------- */
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.fig [data-draw] {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+.fig[data-inview="true"] [data-draw] {
+  animation: draw 1400ms var(--ease-out-expo) both;
+  animation-delay: calc(var(--i, 0) * 110ms);
+}
+
+@keyframes approach-a {
+  0%,
+  8% {
+    translate: -150px 0;
+  }
+  44%,
+  100% {
+    translate: 0 0;
+  }
+}
+@keyframes approach-b {
+  0%,
+  8% {
+    translate: 120px 0;
+  }
+  44%,
+  100% {
+    translate: 0 0;
+  }
+}
+@keyframes knock {
+  0%,
+  44% {
+    rotate: 0deg;
+  }
+  50%,
+  100% {
+    rotate: 14deg;
+  }
+}
+@keyframes crash-on {
+  0%,
+  44% {
+    opacity: 0;
+  }
+  47%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes crash-off {
+  0%,
+  44% {
+    opacity: 1;
+  }
+  47%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes cruise {
+  from {
+    translate: var(--from, -80px) 0;
+  }
+  to {
+    translate: var(--to, 80px) 0;
+  }
+}
+.car-b {
+  rotate: 14deg;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.crash-off {
+  opacity: 0;
+}
+/* The collision plays once when the frame comes into view and holds on the
+   crash lock. The Replay control restarts it. */
+.fig[data-inview="true"] .car-a {
+  animation: approach-a 4.5s var(--ease-in-quart) both;
+}
+.fig[data-inview="true"] .car-b-move {
+  animation: approach-b 4.5s var(--ease-in-quart) both;
+}
+.fig[data-inview="true"] .car-b {
+  animation: knock 4.5s var(--ease-out-expo) both;
+}
+.fig[data-inview="true"] .crash-on {
+  animation: crash-on 4.5s linear both;
+}
+.fig[data-inview="true"] .crash-off {
+  animation: crash-off 4.5s linear both;
+}
+.fig[data-inview="true"] .cruise {
+  animation: cruise 4.5s var(--ease-out-expo) both;
+}
+
+/* ---------- Disclosure ---------- */
+
+.reveal {
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition:
+    grid-template-rows 520ms var(--ease-out-expo),
+    visibility 0s linear 520ms;
+}
+.reveal[data-open="true"] {
+  grid-template-rows: 1fr;
+  visibility: visible;
+  transition:
+    grid-template-rows 520ms var(--ease-out-expo),
+    visibility 0s;
+}
+.reveal > div {
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* ---------- Mobile menu ---------- */
+
+dialog.menu {
+  margin: 0;
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  border: 0;
+  padding: 0;
+  background: var(--color-ink);
+  color: var(--color-text);
+}
+dialog.menu::backdrop {
+  background: var(--color-ink);
+}
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    transition-delay: 0ms !important;
+  }
+  .fig [data-draw] {
+    stroke-dashoffset: 0;
+    animation: none !important;
+  }
+  .fig .car-a,
+  .fig .car-b,
+  .fig .car-b-move,
+  .fig .cruise,
+  .fig .crash-on,
+  .fig .crash-off {
+    animation: none !important;
+  }
 }

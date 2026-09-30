@@ -5,6 +5,12 @@ import nextTs from "eslint-config-next/typescript";
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
+  {
+    // The WebGL scene is an imperative render loop: uniforms, buffers and the
+    // shared stage state are mutated every frame on purpose, outside React.
+    files: ["src/components/three/**"],
+    rules: { "react-hooks/immutability": "off" },
+  },
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:

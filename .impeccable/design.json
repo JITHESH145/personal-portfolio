@@ -1,0 +1,469 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-30T00:00:00.000Z",
+  "title": "Design System: Jithesh Shaju P Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#080b12",
+        "oklch": "oklch(15.0% 0.016 266)",
+        "tonalRamp": [
+          "oklch(15% 0.016 266)",
+          "oklch(26% 0.016 266)",
+          "oklch(38% 0.016 266)",
+          "oklch(50% 0.016 266)",
+          "oklch(62% 0.016 266)",
+          "oklch(73% 0.016 266)",
+          "oklch(84% 0.016 266)",
+          "oklch(95% 0.016 266)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "canonical": "#0d121e",
+        "oklch": "oklch(18.3% 0.026 267)",
+        "tonalRamp": [
+          "oklch(15% 0.026 267)",
+          "oklch(26% 0.026 267)",
+          "oklch(38% 0.026 267)",
+          "oklch(50% 0.026 267)",
+          "oklch(62% 0.026 267)",
+          "oklch(73% 0.026 267)",
+          "oklch(84% 0.026 267)",
+          "oklch(95% 0.026 267)"
+        ]
+      },
+      "raised": {
+        "role": "neutral",
+        "displayName": "Raised",
+        "canonical": "#141a29",
+        "oklch": "oklch(22.0% 0.031 267)",
+        "tonalRamp": [
+          "oklch(15% 0.031 267)",
+          "oklch(26% 0.031 267)",
+          "oklch(38% 0.031 267)",
+          "oklch(50% 0.031 267)",
+          "oklch(62% 0.031 267)",
+          "oklch(73% 0.031 267)",
+          "oklch(84% 0.031 267)",
+          "oklch(95% 0.031 267)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "canonical": "#222a3b",
+        "oklch": "oklch(28.5% 0.033 265)",
+        "tonalRamp": [
+          "oklch(15% 0.033 265)",
+          "oklch(26% 0.033 265)",
+          "oklch(38% 0.033 265)",
+          "oklch(50% 0.033 265)",
+          "oklch(62% 0.033 265)",
+          "oklch(73% 0.033 265)",
+          "oklch(84% 0.033 265)",
+          "oklch(95% 0.033 265)"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Strong Line",
+        "canonical": "#3a4560",
+        "oklch": "oklch(39.3% 0.048 267)",
+        "tonalRamp": [
+          "oklch(15% 0.048 267)",
+          "oklch(26% 0.048 267)",
+          "oklch(38% 0.048 267)",
+          "oklch(50% 0.048 267)",
+          "oklch(62% 0.048 267)",
+          "oklch(73% 0.048 267)",
+          "oklch(84% 0.048 267)",
+          "oklch(95% 0.048 267)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Text",
+        "canonical": "#e8ecf4",
+        "oklch": "oklch(94.2% 0.012 265)",
+        "tonalRamp": [
+          "oklch(15% 0.012 265)",
+          "oklch(26% 0.012 265)",
+          "oklch(38% 0.012 265)",
+          "oklch(50% 0.012 265)",
+          "oklch(62% 0.012 265)",
+          "oklch(73% 0.012 265)",
+          "oklch(84% 0.012 265)",
+          "oklch(95% 0.012 265)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "canonical": "#9aa5ba",
+        "oklch": "oklch(72.0% 0.033 263)",
+        "tonalRamp": [
+          "oklch(15% 0.033 263)",
+          "oklch(26% 0.033 263)",
+          "oklch(38% 0.033 263)",
+          "oklch(50% 0.033 263)",
+          "oklch(62% 0.033 263)",
+          "oklch(73% 0.033 263)",
+          "oklch(84% 0.033 263)",
+          "oklch(95% 0.033 263)"
+        ]
+      },
+      "faint": {
+        "role": "neutral",
+        "displayName": "Faint",
+        "canonical": "#7e8aa3",
+        "oklch": "oklch(63.2% 0.040 265)",
+        "tonalRamp": [
+          "oklch(15% 0.040 265)",
+          "oklch(26% 0.040 265)",
+          "oklch(38% 0.040 265)",
+          "oklch(50% 0.040 265)",
+          "oklch(62% 0.040 265)",
+          "oklch(73% 0.040 265)",
+          "oklch(84% 0.040 265)",
+          "oklch(95% 0.040 265)"
+        ]
+      },
+      "signal": {
+        "role": "secondary",
+        "displayName": "Signal Blue",
+        "canonical": "#7c9bff",
+        "oklch": "oklch(71.0% 0.150 269)",
+        "tonalRamp": [
+          "oklch(15% 0.150 269)",
+          "oklch(26% 0.150 269)",
+          "oklch(38% 0.150 269)",
+          "oklch(50% 0.150 269)",
+          "oklch(62% 0.150 269)",
+          "oklch(73% 0.150 269)",
+          "oklch(84% 0.150 269)",
+          "oklch(95% 0.150 269)"
+        ]
+      },
+      "signal-deep": {
+        "role": "secondary",
+        "displayName": "Deep Signal",
+        "canonical": "#3d5bd9",
+        "oklch": "oklch(52.5% 0.196 269)",
+        "tonalRamp": [
+          "oklch(15% 0.196 269)",
+          "oklch(26% 0.196 269)",
+          "oklch(38% 0.196 269)",
+          "oklch(50% 0.196 269)",
+          "oklch(62% 0.196 269)",
+          "oklch(73% 0.196 269)",
+          "oklch(84% 0.196 269)",
+          "oklch(95% 0.196 269)"
+        ]
+      },
+      "lock": {
+        "role": "primary",
+        "displayName": "Lock Lime",
+        "canonical": "#c9f24b",
+        "oklch": "oklch(90.2% 0.192 122)",
+        "tonalRamp": [
+          "oklch(15% 0.192 122)",
+          "oklch(26% 0.192 122)",
+          "oklch(38% 0.192 122)",
+          "oklch(50% 0.192 122)",
+          "oklch(62% 0.192 122)",
+          "oklch(73% 0.192 122)",
+          "oklch(84% 0.192 122)",
+          "oklch(95% 0.192 122)"
+        ]
+      },
+      "on-lock": {
+        "role": "primary",
+        "displayName": "Lock Ink",
+        "canonical": "#0b1005",
+        "oklch": "oklch(16.4% 0.025 127)",
+        "tonalRamp": [
+          "oklch(15% 0.025 127)",
+          "oklch(26% 0.025 127)",
+          "oklch(38% 0.025 127)",
+          "oklch(50% 0.025 127)",
+          "oklch(62% 0.025 127)",
+          "oklch(73% 0.025 127)",
+          "oklch(84% 0.025 127)",
+          "oklch(95% 0.025 127)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name in the hero and the closing line in Contact. Uppercase, Archivo at 125% width."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "One per section, sentence case, Archivo at 116% width. Nothing sits above it."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Role titles and the degree, Archivo at 108% width."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Hero sentence, first paragraph of About, stated outcomes and impact lines."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Reading text, capped at 68ch, usually in Muted."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Field labels and secondary lines at 400; block sub-headings at 600."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Button text only. Uppercase, 0.06em tracking."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "JetBrains Mono for dates, stack names, stage names, and machine labels. 0.75rem inside label chips."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Default easing for every state change, entrance, and drawn stroke."
+      },
+      {
+        "name": "ease-in-quart",
+        "value": "cubic-bezier(0.5, 0, 0.75, 0)",
+        "purpose": "Accelerating approach inside the collision figure only."
+      },
+      {
+        "name": "press",
+        "value": "120ms",
+        "purpose": "Button press offset (1px down) and hero label colour change."
+      },
+      {
+        "name": "colour",
+        "value": "180ms",
+        "purpose": "Hover colour on buttons and links; frame colour on lock."
+      },
+      {
+        "name": "stage-link",
+        "value": "360ms",
+        "purpose": "Lime fill travelling along a pipeline connector."
+      },
+      {
+        "name": "tick-draw",
+        "value": "420ms",
+        "purpose": "Corner ticks drawing out to a closed frame (380ms on hero labels)."
+      },
+      {
+        "name": "nav-marker",
+        "value": "500ms",
+        "purpose": "The locked frame sliding between nav links."
+      },
+      {
+        "name": "reveal",
+        "value": "520ms",
+        "purpose": "Case-study disclosure height, and the interval between pipeline stages in a trace."
+      },
+      {
+        "name": "entrance-line",
+        "value": "900ms, delay i × 90ms + 120ms",
+        "purpose": "Hero name lines rising from a clip, once on load."
+      },
+      {
+        "name": "entrance-settle",
+        "value": "800ms, delay i × 70ms + 380ms",
+        "purpose": "Hero supporting content fading up 0.75rem, once on load."
+      },
+      {
+        "name": "figure-draw",
+        "value": "1400ms, delay i × 110ms",
+        "purpose": "SVG strokes drawing in when a figure enters view."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "1ms",
+        "purpose": "Under prefers-reduced-motion all durations collapse, figures show their final state, the 3D field renders on demand, and pipelines do not auto-trace."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Solid Button",
+      "kind": "button",
+      "refersTo": "button-solid",
+      "description": "Primary action, one per group. Off-white at rest, lime on hover.",
+      "html": "<button class=\"ds-btn-solid\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg>Open case study</button>",
+      "css": ".ds-btn-solid { display: inline-flex; align-items: center; justify-content: center; gap: 0.625rem; min-height: 3rem; padding: 0 1.5rem; border: 0; border-radius: 0; font-family: var(--font-archivo, Archivo), ui-sans-serif, system-ui, sans-serif; font-stretch: 108%; font-weight: 600; font-size: 0.875rem; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), color 180ms cubic-bezier(0.16, 1, 0.3, 1), translate 120ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-solid:active { translate: 0 1px; } .ds-btn-solid:focus-visible { outline: 2px solid var(--color-lock, #c9f24b); outline-offset: 3px; } .ds-btn-solid[disabled] { opacity: 0.5; cursor: not-allowed; } .ds-btn-solid { background: var(--color-text, #e8ecf4); color: var(--color-ink, #080b12); } .ds-btn-solid:hover { background: var(--color-lock, #c9f24b); color: var(--color-on-lock, #0b1005); }"
+    },
+    {
+      "name": "Frame Button",
+      "kind": "button",
+      "refersTo": "button-frame",
+      "description": "Secondary action. Corner ticks at rest; the frame closes and turns lime on hover or focus.",
+      "html": "<a class=\"ds-btn-frame\" href=\"#\">Repository<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M8 7h9v9\"/><path d=\"M17 7 6 18\"/></svg></a>",
+      "css": ".ds-btn-frame { display: inline-flex; align-items: center; justify-content: center; gap: 0.625rem; min-height: 3rem; padding: 0 1.5rem; border: 0; border-radius: 0; font-family: var(--font-archivo, Archivo), ui-sans-serif, system-ui, sans-serif; font-stretch: 108%; font-weight: 600; font-size: 0.875rem; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), color 180ms cubic-bezier(0.16, 1, 0.3, 1), translate 120ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-frame:active { translate: 0 1px; } .ds-btn-frame:focus-visible { outline: 2px solid var(--color-lock, #c9f24b); outline-offset: 3px; } .ds-btn-frame[disabled] { opacity: 0.5; cursor: not-allowed; } .ds-btn-frame { background: transparent; color: var(--color-text, #e8ecf4); } .ds-btn-frame { position: relative; } .ds-btn-frame::before { content: \"\"; position: absolute; inset: 0; pointer-events: none; --ds-tick: 10px; --ds-frame: var(--color-faint, #7e8aa3); background: linear-gradient(var(--ds-frame), var(--ds-frame)) left top / var(--ds-tick) 1px, linear-gradient(var(--ds-frame), var(--ds-frame)) left top / 1px var(--ds-tick), linear-gradient(var(--ds-frame), var(--ds-frame)) right top / var(--ds-tick) 1px, linear-gradient(var(--ds-frame), var(--ds-frame)) right top / 1px var(--ds-tick), linear-gradient(var(--ds-frame), var(--ds-frame)) left bottom / var(--ds-tick) 1px, linear-gradient(var(--ds-frame), var(--ds-frame)) left bottom / 1px var(--ds-tick), linear-gradient(var(--ds-frame), var(--ds-frame)) right bottom / var(--ds-tick) 1px, linear-gradient(var(--ds-frame), var(--ds-frame)) right bottom / 1px var(--ds-tick); background-repeat: no-repeat; } .ds-btn-frame:hover { color: var(--color-lock, #c9f24b); } .ds-btn-frame:hover::before, .ds-btn-frame:focus-visible::before { --ds-tick: 51%; --ds-frame: var(--color-lock, #c9f24b); }"
+    },
+    {
+      "name": "Framed Panel with Label Chip",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Surface panel with corner ticks and a mono class label on its top edge. Figures and fact sheets only.",
+      "html": "<div class=\"ds-panel\"><span class=\"ds-panel-tag\">profile</span><dl class=\"ds-panel-list\"><div class=\"ds-panel-row\"><dt>Current role</dt><dd>AI Trainer and Developer</dd></div><div class=\"ds-panel-row\"><dt>Graduated</dt><dd>2024</dd></div></dl></div>",
+      "css": ".ds-panel { background: var(--color-surface, #0d121e); color: var(--color-text, #e8ecf4); padding: 2rem; margin-top: 1.5rem; font-family: var(--font-archivo, Archivo), ui-sans-serif, system-ui, sans-serif; font-size: 1.0625rem; line-height: 1.65; } .ds-panel { position: relative; } .ds-panel::before { content: \"\"; position: absolute; inset: 0; pointer-events: none; --ds-tick: 10px; --ds-frame: var(--color-line-strong, #3a4560); background: linear-gradient(var(--ds-frame), var(--ds-frame)) left top / var(--ds-tick) 1px, linear-gradient(var(--ds-frame), var(--ds-frame)) left top / 1px var(--ds-tick), linear-gradient(var(--ds-frame), var(--ds-frame)) right top / var(--ds-tick) 1px, linear-gradient(var(--ds-frame), var(--ds-frame)) right top / 1px var(--ds-tick), linear-gradient(var(--ds-frame), var(--ds-frame)) left bottom / var(--ds-tick) 1px, linear-gradient(var(--ds-frame), var(--ds-frame)) left bottom / 1px var(--ds-tick), linear-gradient(var(--ds-frame), var(--ds-frame)) right bottom / var(--ds-tick) 1px, linear-gradient(var(--ds-frame), var(--ds-frame)) right bottom / 1px var(--ds-tick); background-repeat: no-repeat; } .ds-panel-tag { position: absolute; left: 0; top: 0; transform: translateY(-100%); font-family: var(--font-jetbrains, 'JetBrains Mono'), ui-monospace, 'SFMono-Regular', monospace; font-size: 0.75rem; line-height: 1; letter-spacing: 0.04em; padding: 0.3125rem 0.5rem; color: var(--color-muted, #9aa5ba); background: var(--color-raised, #141a29); } .ds-panel-list { margin: 0; } .ds-panel-row { display: grid; grid-template-columns: 8.5rem 1fr; column-gap: 1.5rem; padding: 0.875rem 0; } .ds-panel-row + .ds-panel-row { border-top: 1px solid var(--color-line, #222a3b); } .ds-panel-row:first-child { padding-top: 0; } .ds-panel-row:last-child { padding-bottom: 0; } .ds-panel-row dt { font-size: 0.9375rem; color: var(--color-muted, #9aa5ba); } .ds-panel-row dd { margin: 0; font-weight: 500; }"
+    },
+    {
+      "name": "Label Chip",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Mono class label for a framed target. Resting on Raised; lime with dark text when its target is locked.",
+      "html": "<span class=\"ds-tag\">nearest entries</span> <span class=\"ds-tag ds-tag-locked\">query</span>",
+      "css": ".ds-tag { display: inline-block; font-family: var(--font-jetbrains, 'JetBrains Mono'), ui-monospace, 'SFMono-Regular', monospace; font-size: 0.75rem; line-height: 1; letter-spacing: 0.04em; padding: 0.3125rem 0.5rem; color: var(--color-muted, #9aa5ba); background: var(--color-raised, #141a29); } .ds-tag-locked { color: var(--color-on-lock, #0b1005); background: var(--color-lock, #c9f24b); }"
+    },
+    {
+      "name": "Skill Chip",
+      "kind": "chip",
+      "refersTo": "skill-chip",
+      "description": "Selectable skill or group. A frame with a group marker; closes and turns lime when selected.",
+      "html": "<button class=\"ds-skill\"><svg width=\"12\" height=\"12\" viewBox=\"-8 -8 16 16\" fill=\"currentColor\" aria-hidden=\"true\"><rect x=\"-4\" y=\"-4\" width=\"8\" height=\"8\"/></svg><span>NumPy</span></button> <button class=\"ds-skill\" aria-pressed=\"true\"><svg width=\"12\" height=\"12\" viewBox=\"-8 -8 16 16\" fill=\"currentColor\" aria-hidden=\"true\"><circle r=\"4.5\"/></svg><span>NLP</span></button>",
+      "css": ".ds-skill { display: inline-flex; align-items: center; gap: 0.625rem; min-height: 2.75rem; padding: 0 0.875rem; border: 0; border-radius: 0; background: transparent; font-family: var(--font-archivo, Archivo), ui-sans-serif, system-ui, sans-serif; font-size: 0.9375rem; color: var(--color-muted, #9aa5ba); cursor: pointer; transition: color 200ms; } .ds-skill svg { color: var(--color-signal, #7c9bff); flex-shrink: 0; } .ds-skill { position: relative; } .ds-skill::before { content: \"\"; position: absolute; inset: 0; pointer-events: none; --ds-tick: 10px; --ds-frame: var(--color-line-strong, #3a4560); background: linear-gradient(var(--ds-frame), var(--ds-frame)) left top / var(--ds-tick) 1px, linear-gradient(var(--ds-frame), var(--ds-frame)) left top / 1px var(--ds-tick), linear-gradient(var(--ds-frame), var(--ds-frame)) right top / var(--ds-tick) 1px, linear-gradient(var(--ds-frame), var(--ds-frame)) right top / 1px var(--ds-tick), linear-gradient(var(--ds-frame), var(--ds-frame)) left bottom / var(--ds-tick) 1px, linear-gradient(var(--ds-frame), var(--ds-frame)) left bottom / 1px var(--ds-tick), linear-gradient(var(--ds-frame), var(--ds-frame)) right bottom / var(--ds-tick) 1px, linear-gradient(var(--ds-frame), var(--ds-frame)) right bottom / 1px var(--ds-tick); background-repeat: no-repeat; } .ds-skill:hover { color: var(--color-text, #e8ecf4); } .ds-skill[aria-pressed=\"true\"], .ds-skill[aria-pressed=\"true\"] svg { color: var(--color-lock, #c9f24b); } .ds-skill:hover::before, .ds-skill:focus-visible::before, .ds-skill[aria-pressed=\"true\"]::before { --ds-tick: 51%; --ds-frame: var(--color-lock, #c9f24b); } .ds-skill:focus-visible { outline: 2px solid var(--color-lock, #c9f24b); outline-offset: 3px; }"
+    },
+    {
+      "name": "Primary Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Fixed bar. The current section carries the one closed lime frame, which slides between links.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-mark\" href=\"#\">JSP</a><ul class=\"ds-nav-list\"><li><a href=\"#\" aria-current=\"true\">Home</a></li><li><a href=\"#\">About</a></li><li><a href=\"#\">Skills</a></li><li><a href=\"#\">Projects</a></li><li><a href=\"#\">Contact</a></li></ul></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; height: 4.5rem; padding: 0 1.5rem; background: var(--color-ink, #080b12); border-bottom: 1px solid var(--color-line, #222a3b); font-family: var(--font-archivo, Archivo), ui-sans-serif, system-ui, sans-serif; } .ds-nav-mark { font-size: 0.9375rem; font-weight: 700; font-stretch: 125%; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; color: var(--color-text, #e8ecf4); } .ds-nav-list { display: flex; margin: 0; padding: 0; list-style: none; } .ds-nav-list a { position: relative; display: flex; align-items: center; min-height: 2.75rem; padding: 0 0.875rem; font-size: 0.875rem; letter-spacing: 0.01em; text-decoration: none; color: var(--color-muted, #9aa5ba); transition: color 200ms; } .ds-nav-list a:hover, .ds-nav-list a[aria-current] { color: var(--color-text, #e8ecf4); } .ds-nav-list a[aria-current]::before { content: \"\"; position: absolute; inset: 0.25rem 0; border: 1px solid var(--color-lock, #c9f24b); pointer-events: none; } .ds-nav-list a:focus-visible, .ds-nav-mark:focus-visible { outline: 2px solid var(--color-lock, #c9f24b); outline-offset: 3px; }"
+    },
+    {
+      "name": "Pipeline",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "A system as ordered stages. Reached stages keep a lime dot and a lit connector; the current stage is locked.",
+      "html": "<ol class=\"ds-pipe\"><li class=\"ds-pipe-stage\" data-state=\"passed\"><div class=\"ds-pipe-rail\"><span class=\"ds-pipe-mark\"><i></i></span><span class=\"ds-pipe-link\"></span></div><span class=\"ds-pipe-name\">Query</span><span class=\"ds-pipe-detail\">The question goes to the backend.</span></li><li class=\"ds-pipe-stage\" data-state=\"current\"><div class=\"ds-pipe-rail\"><span class=\"ds-pipe-mark\"><i></i></span><span class=\"ds-pipe-link\"></span></div><span class=\"ds-pipe-name\">Embedding</span><span class=\"ds-pipe-detail\">The query is turned into a vector.</span></li><li class=\"ds-pipe-stage\"><div class=\"ds-pipe-rail\"><span class=\"ds-pipe-mark\"><i></i></span></div><span class=\"ds-pipe-name\">Vector search</span><span class=\"ds-pipe-detail\">The closest entries are found by similarity.</span></li></ol>",
+      "css": ".ds-pipe { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; padding: 0; list-style: none; font-family: var(--font-archivo, Archivo), ui-sans-serif, system-ui, sans-serif; } .ds-pipe-rail { display: flex; align-items: center; margin-bottom: 1rem; } .ds-pipe-mark { display: grid; place-items: center; width: 1.25rem; height: 1.25rem; flex-shrink: 0; } .ds-pipe-mark { position: relative; } .ds-pipe-mark::before { content: \"\"; position: absolute; inset: 0; pointer-events: none; --ds-tick: 5px; --ds-frame: var(--color-line-strong, #3a4560); background: linear-gradient(var(--ds-frame), var(--ds-frame)) left top / var(--ds-tick) 1px, linear-gradient(var(--ds-frame), var(--ds-frame)) left top / 1px var(--ds-tick), linear-gradient(var(--ds-frame), var(--ds-frame)) right top / var(--ds-tick) 1px, linear-gradient(var(--ds-frame), var(--ds-frame)) right top / 1px var(--ds-tick), linear-gradient(var(--ds-frame), var(--ds-frame)) left bottom / var(--ds-tick) 1px, linear-gradient(var(--ds-frame), var(--ds-frame)) left bottom / 1px var(--ds-tick), linear-gradient(var(--ds-frame), var(--ds-frame)) right bottom / var(--ds-tick) 1px, linear-gradient(var(--ds-frame), var(--ds-frame)) right bottom / 1px var(--ds-tick); background-repeat: no-repeat; } .ds-pipe-mark i { width: 6px; height: 6px; background: var(--color-line-strong, #3a4560); transition: background-color 200ms; } .ds-pipe-link { flex: 1; height: 1px; background: var(--color-line, #222a3b); } .ds-pipe-name { display: block; font-family: var(--font-jetbrains, 'JetBrains Mono'), ui-monospace, 'SFMono-Regular', monospace; font-size: 0.8125rem; line-height: 1.4; letter-spacing: 0.02em; text-transform: uppercase; color: var(--color-muted, #9aa5ba); } .ds-pipe-detail { display: block; margin-top: 0.375rem; padding-right: 1.25rem; font-size: 0.9375rem; line-height: 1.45; color: var(--color-muted, #9aa5ba); } .ds-pipe-stage[data-state] .ds-pipe-mark i { background: var(--color-lock, #c9f24b); } .ds-pipe-stage[data-state] .ds-pipe-mark::before { --ds-tick: 51%; } .ds-pipe-stage[data-state] .ds-pipe-name, .ds-pipe-stage[data-state] .ds-pipe-detail { color: var(--color-text, #e8ecf4); } .ds-pipe-stage[data-state=\"passed\"] .ds-pipe-link { background: var(--color-lock, #c9f24b); } .ds-pipe-stage[data-state=\"current\"] .ds-pipe-mark::before { --ds-frame: var(--color-lock, #c9f24b); } .ds-pipe-stage[data-state=\"current\"] .ds-pipe-name { color: var(--color-lock, #c9f24b); }"
+    },
+    {
+      "name": "Contact Row",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "A whole-row link between hairline rules: label, value, arrow. The row turns lime on hover.",
+      "html": "<a class=\"ds-row\" href=\"#\"><span class=\"ds-row-label\">GitHub</span><span class=\"ds-row-value\">JITHESH145</span><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M8 7h9v9\"/><path d=\"M17 7 6 18\"/></svg></a>",
+      "css": ".ds-row { display: grid; grid-template-columns: 7rem 1fr auto; align-items: center; column-gap: 1rem; min-height: 4rem; padding: 0.75rem 0; border-top: 1px solid var(--color-line, #222a3b); border-bottom: 1px solid var(--color-line, #222a3b); font-family: var(--font-archivo, Archivo), ui-sans-serif, system-ui, sans-serif; color: var(--color-text, #e8ecf4); text-decoration: none; transition: color 200ms; } .ds-row-label { font-size: 0.9375rem; color: var(--color-muted, #9aa5ba); transition: color 200ms; } .ds-row-value { font-size: clamp(1.0625rem, 2.2vw, 1.5rem); font-weight: 500; line-height: 1.2; } .ds-row svg { color: var(--color-faint, #7e8aa3); transition: color 300ms cubic-bezier(0.16, 1, 0.3, 1), translate 300ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-row:hover, .ds-row:hover .ds-row-label, .ds-row:hover svg { color: var(--color-lock, #c9f24b); } .ds-row:hover svg { translate: 2px -2px; } .ds-row:focus-visible { outline: 2px solid var(--color-lock, #c9f24b); outline-offset: 3px; }"
+    },
+    {
+      "name": "Text Link",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "In-text link: a 1px Strong Line underline that turns lime with the text on hover.",
+      "html": "<a class=\"ds-link\" href=\"#\">Back to top</a>",
+      "css": ".ds-link { font-family: var(--font-archivo, Archivo), ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; color: var(--color-faint, #7e8aa3); text-decoration: underline; text-decoration-color: var(--color-line-strong, #3a4560); text-decoration-thickness: 1px; text-underline-offset: 0.28em; transition: color 180ms cubic-bezier(0.16, 1, 0.3, 1), text-decoration-color 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-link:hover { color: var(--color-lock, #c9f24b); text-decoration-color: var(--color-lock, #c9f24b); } .ds-link:focus-visible { outline: 2px solid var(--color-lock, #c9f24b); outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "status": "Unconfirmed. North Star, overview voice, and colour display names were written from the shipped build without the owner's confirmation round.",
+    "northStar": "The Annotated Field",
+    "overview": "The page is what a detection model sees when it looks at one career. A blue-black ground holds a field of data points that enter scattered, pass through a network, and leave in ordered rows. Over that field, the things that matter are picked out the way a detector picks out a target: four corner ticks at rest, a closed box and a label when attention lands. The interface has no other ornament. Everything that looks like decoration is a diagram of something, and everything that lights up does so because it is being attended to.\n\nThe mood is dark, quiet, and exact. Type is large and wide-set but the page is sparse: one column of reading, hairline rules between entries, a single tinted panel where a figure or a fact sheet needs a ground. Colour is rationed. Blue belongs to the data. Lime belongs to the lock. Everything else is ink, off-white, and two greys. Motion follows the same logic: ticks draw out to a box, a signal travels from one stage to the next, and everything eases out exponentially and then stays still.",
+    "keyCharacteristics": [
+      "Blue-black ground, off-white type, zero radius, zero shadow.",
+      "One component language: the annotation frame (corner ticks at rest, closed box on lock).",
+      "Lime appears only on a lock and on the path that feeds it.",
+      "One type family (Archivo) whose width axis carries the hierarchy; mono only for data.",
+      "Hairline rules and open space separate content; tinted panels are reserved for figures and fact sheets.",
+      "A fixed 3D data field sits behind the hero and returns, dimmed, behind Contact.",
+      "Complete without WebGL, on a phone, and with reduced motion."
+    ],
+    "rules": [
+      {
+        "name": "The Lock Rule",
+        "body": "Lime means attention is here. It appears on a locked target, on the path that feeds that target, and as the hover and focus response of a control. It is never a resting fill, a heading colour, or decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Blue Is Data Rule",
+        "body": "Signal Blue colours data marks: points, nodes, edges, bounding boxes. It never fills a control or a surface.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Ink Rule",
+        "body": "Every neutral is a lightness step of the same blue-black. No neutral grey, no pure black, no pure white.",
+        "section": "colors"
+      },
+      {
+        "name": "The Width Is Rank Rule",
+        "body": "Hierarchy is set by Archivo's width axis together with size: 125% display, 116% headline, 108% title and label, 100% for everything read. Do not introduce a second sans family to make a heading feel different.",
+        "section": "typography"
+      },
+      {
+        "name": "The Mono Is Data Rule",
+        "body": "Mono appears only where the page reports a value or a machine label: a date, a stack item, a stage name, a detector's class label. Never for prose, headings, or buttons.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hairline Rule",
+        "body": "Separate entries with a 1px rule and space. A tinted panel is for a figure or a fact sheet, never a wrapper around ordinary content.",
+        "section": "layout"
+      },
+      {
+        "name": "The No Shadow Rule",
+        "body": "Nothing casts a shadow or blurs what is behind it. A surface is distinguished by a lightness step or a frame.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Ghost Tick Rule",
+        "body": "Anything that can lock shows its four corner ticks before it does. The unlit state is designed, never blank.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Square Corner Rule",
+        "body": "Zero radius on every container and control. Circles are data points only.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do build every new interactive or highlighted element from the annotation frame: corner ticks at rest, closed 1px lime box on lock, ticks drawing out over 420ms with `cubic-bezier(0.16, 1, 0.3, 1)`.",
+      "Do keep lime for attention only: a lock, the path feeding it, hover, and focus. Put only Lock Ink (#0b1005) on a lime fill.",
+      "Do give a Frame control's resting ticks the Faint colour (#7e8aa3) so its boundary is visible before hover.",
+      "Do set hierarchy with Archivo's width axis: 125% display, 116% headline, 108% title and label, normal width for reading text.",
+      "Do separate entries with a 1px Line rule and generous space, and cap reading text at 68ch.",
+      "Do keep every interactive target at least 2.75rem tall and keep the 2px lime focus outline.",
+      "Do make every diagram a true picture of something in the content, drawn in the system's tokens, with lime only on its locked target.",
+      "Do keep the page complete when WebGL is missing and when motion is reduced: the static network drawing and the final state of every animation must stand on their own.",
+      "Do keep tertiary text at Faint or brighter; Strong Line and Line are for strokes."
+    ],
+    "donts": [
+      "Don't round a corner. No border radius on any container, control, chip, or focus ring.",
+      "Don't add box shadows, glows, blur, or glass panels. Depth is a lightness step of ink or a frame.",
+      "Don't use lime as a resting fill, a heading colour, or decoration.",
+      "Don't fill a control or a surface with Signal Blue; blue is for data marks.",
+      "Don't set prose, headings, or button labels in mono.",
+      "Don't wrap ordinary content in a tinted panel; panels are for figures and fact sheets.",
+      "Don't put a small label above a section headline. Headlines stand alone.",
+      "Don't bounce, spin, or loop. Motion eases out exponentially, plays once, and rests.",
+      "Don't introduce a second sans family, a neutral grey, pure black, or pure white."
+    ]
+  }
+}
